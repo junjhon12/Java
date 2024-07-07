@@ -28,9 +28,6 @@ public class ProcessManager {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
                 String line;
                 
-                // Print the header for the output
-                System.out.printf("%-30s %-10s %-10s%n", "Process Name", "PID", "Memory Usage");
-                
                 // Print each line of the output
                 while ((line = reader.readLine()) != null) {
                     System.out.println(line);
