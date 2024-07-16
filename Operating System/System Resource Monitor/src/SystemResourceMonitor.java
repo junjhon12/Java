@@ -118,7 +118,7 @@ public class SystemResourceMonitor {
 
             // Sleep for 10 seconds before the next iteration
             try {
-                Thread.sleep(10000); // 10 seconds
+                Thread.sleep(5000); // 5 seconds
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
