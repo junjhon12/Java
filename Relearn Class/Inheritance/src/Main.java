@@ -6,6 +6,9 @@ public class Main {
         car1.stop();
         plane2.move();
         plane2.stop();
+
+        System.out.println(car1.getName());
+        System.out.println(plane2.getColor());
     }
 }
 
@@ -22,6 +25,20 @@ class Vehicle {
     }
     public void stop() {
         System.out.println(this.name + " stopped.");
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+    public void setColor(String color) {
+        this.color = color;
     }
 }
 
@@ -48,5 +65,11 @@ class Plane extends Vehicle{
         this.model = model;
         this.doors = doors;
         this.engines = engines;
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Moving with Override");
+        super.move();
     }
 }
